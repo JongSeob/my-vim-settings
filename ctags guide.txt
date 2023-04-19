@@ -1,0 +1,21 @@
+.ctags 파일: ctags command의 language로 systemverilog 언어를 추가.
+             정규식을 이용하여 systemverilog 파일을 tagging할 때 확인해야할 keyword들을 정의
+
+.vimrc 파일: set tags=<path> & set tags+=<path> 문장을 사용하여
+             Ctrn+] 입력 시 tags파일을 어디 경로에서 찾을 것인지 명시
+
+
+** ctags command 사용 예시 **
+
+% ctags --tag-relative=yes --language=systemverilog -f ~/.vim/tags/UVM/tags -R .
+  
+  tag할 파일들이 있는 directory로 이동한 상태라고 가정함
+    --tag-relative=(*yes|no)  : no가 default. yes로 설정 시 파일 경로를
+                                절대 경로가 아닌 상대 경로로 설정
+    --languages=systemverilog : tagging할 파일의 language를 명시적으로 지정
+                                systemverilog가 user-defined 타입이기 때문에 필수
+    -f <path                  : *결과파일 생성 위치*를 현재 directory가 아닌 다른 경로로 설정
+                                여기선 ~/.vim/tags/UVM/tags. 마지막 tags가 파일 이름임
+    -R                        : recursive
+    .                         : tagging할 파일의 위치를 현재 directory로 설정
+    
