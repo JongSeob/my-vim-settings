@@ -36,7 +36,7 @@ vim 실행 중에 아래와 같이 command를 실행하면 일괄적으로 설�
 :PlugInstall
 ```
 
-그리고 위 명령어로 설치한 plugin들은 모두 .vim(Linux) 혹은 vimfile(Windows) 경로 내부의
+그리고 위 명령어로 설치한 plugin들은 모두 .vim(Linux) 혹은 vimfiles(Windows) 경로 내부의
 
 plugged/ 폴더에 자동으로 옮겨진다. 그리고 이 폴더 내의 plugin들은 vim-plug에 의해 자동으로 load된다.
 
