@@ -123,6 +123,8 @@ call plug#begin()
 
 Plug 'preservim/nerdtree'      " A tree explorer plugin to rule the Vim world. Bwahahaha!!
 
+Plug 'preservim/tagbar'        " Provides an easy way to browse the tags of the current file and get an overview of its structure
+
 Plug 'godlygeek/tabular'       " Configurable, flexible, intuitive text aligning
 
 Plug 'Yggdroot/indentLine'     " Show vertical lines for indent with conceal feature
