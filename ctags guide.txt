@@ -18,4 +18,3 @@
                                 여기선 ~/.vim/tags/UVM/tags. 마지막 tags가 파일 이름임
     -R                        : recursive
     .                         : tagging할 파일의 위치를 현재 directory로 설정
-    
