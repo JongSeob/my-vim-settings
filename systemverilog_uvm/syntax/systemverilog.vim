@@ -30,26 +30,34 @@ set iskeyword+=`
 syn sync lines=1000
 
 "##########################################################
-"       Define Color
+" Define Color
+"   Red     LightRed     DartRed
+"   Green   LightGreen   DarkGreen SeaGreen
+"   Blue    LightBlue    DarkBlue SlateBlue
+"   Cyan    LightCyan    DarkCyan
+"   Magenta LightMagenta DarkMagenta
+"   Yellow  LightYellow  DarkYellow
+"   Gray    LightGray    DarkGray
+"   Black White Orange Purple Violet Brown
 "##########################################################
 "{{{
-highlight dkred    ctermfg=DarkRed     ctermbg=none      guifg=DarkRed                 gui=bold                           
-highlight dkgreen  ctermfg=DarkGreen   ctermbg=none      guifg=DarkGreen               gui=bold                           
-highlight Green    ctermfg=DarkGreen   ctermbg=none      guifg=Green                   gui=bold                           
-highlight Blue     ctermfg=Blue        ctermbg=none      guifg=Blue                    gui=bold                           
-highlight cyan     ctermfg=Cyan        ctermbg=none      guifg=Cyan                    gui=bold                           
+highlight dkred    ctermfg=DarkRed     ctermbg=none      guifg=DarkRed                 gui=bold
+highlight dkgreen  ctermfg=DarkGreen   ctermbg=none      guifg=DarkGreen               gui=bold
+highlight Green    ctermfg=DarkGreen   ctermbg=none      guifg=Green                   gui=bold
+highlight Blue     ctermfg=Blue        ctermbg=none      guifg=Blue                    gui=bold
+highlight cyan     ctermfg=Cyan        ctermbg=none      guifg=Cyan                    gui=bold
 highlight brown    ctermfg=DarkRed     ctermbg=none      guifg=#8b0000                 gui=italic,bold term=underline,bold
-highlight sky      ctermfg=DarkBlue    ctermbg=none      guifg=#00afef                 gui=bold        term=bold          
-highlight gold     ctermfg=Yellow      ctermbg=none      guifg=#b0b000                 gui=bold        term=bold          
-highlight black    ctermfg=Black       ctermbg=none      guifg=Black                   gui=bold        term=bold          
-highlight grey     ctermfg=Gray        ctermbg=none      guifg=#808080                 gui=bold        term=bold          
-highlight Red      ctermfg=Red         ctermbg=none      guifg=Red                     gui=bold                           
-highlight boost    ctermfg=Blue        ctermbg=none      guifg=Blue                    gui=bold                           
-highlight purple   ctermfg=Magenta     ctermbg=none      guifg=Magenta                 gui=bold                           
-highlight dkpurple ctermfg=DarkMagenta ctermbg=none      guifg=DarkMagenta             gui=bold                           
+highlight sky      ctermfg=DarkBlue    ctermbg=none      guifg=#00afef                 gui=bold        term=bold
+highlight gold     ctermfg=Yellow      ctermbg=none      guifg=#b0b000                 gui=bold        term=bold
+highlight black    ctermfg=Black       ctermbg=none      guifg=Black                   gui=bold        term=bold
+highlight grey     ctermfg=Gray        ctermbg=none      guifg=#808080                 gui=bold        term=bold
+highlight Red      ctermfg=Red         ctermbg=none      guifg=Red                     gui=bold
+highlight boost    ctermfg=Blue        ctermbg=none      guifg=Blue                    gui=bold
+highlight purple   ctermfg=Magenta     ctermbg=none      guifg=Magenta                 gui=bold
+highlight dkpurple ctermfg=DarkMagenta ctermbg=none      guifg=DarkMagenta             gui=bold
 
-highlight hlcyan   ctermfg=Black       ctermbg=Cyan      guifg=Black     guibg=Cyan    gui=bold                           
-highlight hlyellow ctermfg=Black       ctermbg=Yellow    guifg=Black     guibg=Yellow  gui=bold                           
+highlight hlcyan   ctermfg=Black       ctermbg=Cyan      guifg=Black     guibg=Cyan    gui=bold
+highlight hlyellow ctermfg=Black       ctermbg=Yellow    guifg=Black     guibg=Yellow  gui=bold
 "}}}
 
 "##########################################################
@@ -63,7 +71,7 @@ syn keyword verilogStatement   package endpackage
 syn keyword verilogStatement   rand randc constraint randomize
 syn keyword verilogStatement   with inside dist
 syn keyword verilogStatement   randcase
-syn keyword verilogStatement   sequence endsequence randsequence 
+syn keyword verilogStatement   sequence endsequence randsequence
 syn keyword verilogStatement   get_randstate set_randstate
 syn keyword verilogStatement   srandom
 syn keyword verilogStatement   logic bit byte time
@@ -71,7 +79,7 @@ syn keyword verilogStatement   int longint shortint
 syn keyword verilogStatement   struct packed
 syn keyword verilogStatement   final
 syn keyword verilogStatement   import export
-syn keyword verilogStatement   context pure 
+syn keyword verilogStatement   context pure
 syn keyword verilogStatement   void shortreal chandle string
 syn keyword verilogStatement   clocking endclocking
 syn keyword verilogStatement   interface endinterface modport
@@ -83,7 +91,7 @@ syn keyword verilogStatement   alias matches solve static assert
 syn keyword verilogStatement   assume super before expect bind
 syn keyword verilogStatement   extends null tagged extern this
 syn keyword verilogStatement   first_match throughout timeprecision
-syn keyword verilogStatement   timeunit priority type union 
+syn keyword verilogStatement   timeunit priority type union
 syn keyword verilogStatement   uwire var cross ref wait_order intersect
 syn keyword verilogStatement   wildcard within
 syn keyword verilogStatement   triggered
@@ -207,7 +215,9 @@ syn match   uvm_method   "::type_id::create"
 syn keyword uvm_class    uvm_active_passive_enum
 syn keyword uvm_class    uvm_adaptor
 
-"syn match   uvm_class    /\<uvm_analysis_imp_\w\+\s/
+" uvm_analysis_imp_decl  (x)
+" uvm_analysis_imp       (o)
+" uvm_analysis_imp_redef (o)
 syn match   uvm_class    "uvm_analysis_imp\(_decl\)\@!\w*"
 
 syn keyword uvm_class    uvm_barrier
@@ -262,6 +272,7 @@ syn keyword uvm_class    uvm_reg_backdoor
 syn keyword uvm_class    uvm_reg_block
 syn keyword uvm_class    uvm_reg_bus_op
 syn keyword uvm_class    uvm_reg_cbs
+syn keyword uvm_class    uvm_reg_addr_t
 syn keyword uvm_class    uvm_reg_data_t
 syn keyword uvm_class    uvm_reg_field
 syn keyword uvm_class    uvm_reg_item
@@ -613,7 +624,6 @@ syn match   verilogNumber "\(\<\d[0-9_]*\)[munpf]\?s\>"
 syn match   verilogNumber "\<[+-]\=[0-9_]\+\(\.[0-9_]*\|\)\(e[0-9_]*\|\)[munpa]s\>"
 syn keyword verilogNumber 1step
 syn match   verilogTodo   "\<\(File\|IFile\|Include\|Continue\): .*" contained
-
 "}}}
 
 "##########################################################
@@ -660,7 +670,7 @@ highlight link uvm_phase   purple
 highlight link svStatement Statement
 highlight link Alert       red
 
-let b:current_syntax = "sv"
+let b:current_syntax = "systemverilog"
 
 " vim: ts=8
 " vim: fdm=marker
