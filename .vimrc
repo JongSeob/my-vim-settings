@@ -137,17 +137,16 @@ let g:tagbar_type_systemverilog = {
     \ 'ctagstype' : 'systemverilog',
     \ 'sro' : '::',
     \ 'kinds' : [
-        \ 'C:classes',
+        \ 'c:classes',
         \ 't:tasks',
         \ 'f:functions',
         \ 'm:modules',
-        \ 'I:interfaces',
-        \ 'T:typedefs',
-        \ 'c:defines',
-        \ 'K:packages',
-        \ 'V:covergroups',
-    \]
-
+        \ 'i:interfaces',
+        \ 'e:typedefs',
+        \ 'd:defines',
+        \ 'J:packages',
+        \ 'l:covergroups',
+    \],
 \}
 
 "========================================================
