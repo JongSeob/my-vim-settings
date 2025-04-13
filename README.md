@@ -1,5 +1,20 @@
 # my_gvim_settings
 
+새 기기에서 기존 vim 세팅을 바로 불러올 수 있게 vim 환경 파일들을 모아놓은 저장소.
+
+# Quitck Start
+
+1. Create directory
+   1. (Windows): 'C:\\Users\\{user_name}\\vimfiles'
+   2. (Linux): '~/.vim'
+2. Copy 'autoload' into this directory
+3. Copy 'systemverilog_uvm/\*' into this directory
+4. Exectue vim and run below vim command:
+
+```vim
+:PlugInstall
+```
+
 # plugin list
 
 - [vim-plug](https://github.com/junegunn/vim-plug)
@@ -13,9 +28,9 @@
 
 ## **vim-plug**
 
-.vimrc 파일에 listup 해놓은 vim plugin들을 자동으로 install해주고, 이를 load해주는 기능을 제공해주는 **_plugin manager_** 이다.
+플러그인 매니저 기능을 하는 플러그인. vimrc 파일에 listup 해놓은 vim plugin들을 자동으로 install해주고, 이를 load해주는 기능을 제공.
 
-아래는 plugin들을 listup하기 위한 코드의 예시이다. 현재 repository의 .vimrc 파일에서도 확인할 수 있다.
+아래는 plugin들을 listup하기 위한 .vimrc 파일 내용 예시이다. 현재 저장소의 .vimrc 파일에서도 기술되어 있음.
 
 ```vim
 call plug#begin()
@@ -41,6 +56,8 @@ vim 실행 중에 아래와 같이 command를 실행하면 일괄적으로 설�
 plugged/ 폴더에 자동으로 옮겨진다. 그리고 이 폴더 내의 plugin들은 vim-plug에 의해 자동으로 load된다.
 
 vim-plug는 plugin 관리를 위해 필수적이므로 'autoload/plug.vim' 경로에 미리 넣어두었다.
+
+![important] 호홓
 
 # systemverilog_uvm
 
